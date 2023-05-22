@@ -28,18 +28,9 @@ export const rules: Required<ModuleOptions>['rules'] = [
       },
     },
   },
+  // Important!!! Make sure that you disable these lines in webpack.config.production.js
   {
-    test: /\.less$/,
-    use: [
-      {
-        loader: 'style-loader'
-      },
-      {
-        loader: 'css-loader',
-      },
-      {
-        loader: 'less-loader'
-      }
-    ]
-  },
+     test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/,
+     loader: 'url-loader'
+  }
 ];

@@ -1,12 +1,11 @@
 import { createRoot } from "react-dom/client";
 import App from "./pages/index";
+import Welcome from "./pages/Welcome";
 import "./global.css";
 
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
 } from "react-router-dom";
 
 // createBrowserRouter第二参数，可传入basename
@@ -16,8 +15,8 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/main_window/about",
-    element: <div>About</div>,
+    path: "/main_window/welcome",
+    element: <Welcome />,
   },
 ]);
 

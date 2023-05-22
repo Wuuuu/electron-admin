@@ -1,25 +1,25 @@
-import {
-  ChromeFilled,
-  CrownFilled,
-  SmileFilled,
-  TabletFilled,
-} from '@ant-design/icons';
+// import {
+//   ChromeFilled,
+//   CrownFilled,
+//   SmileFilled,
+//   TabletFilled,
+// } from '@ant-design/icons';
+import Welcome from './Welcome';
 
 export default {
   route: {
     path: '/',
     routes: [
       {
-        path: '/welcome',
+        path: '/main_window',
         name: '欢迎',
         // icon: <SmileFilled />,
-        component: './Welcome',
+        component: <Welcome />,
       },
       {
         path: '/admin',
         name: '管理页',
         // icon: <CrownFilled />,
-        access: 'canAdmin',
         component: './Admin',
         routes: [
           {
