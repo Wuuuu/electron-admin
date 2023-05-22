@@ -15,6 +15,7 @@ const config: ForgeConfig = {
   plugins: [
     new WebpackPlugin({
       mainConfig,
+      devContentSecurityPolicy: `default-src 'self' 'unsafe-inline' data:; script-src 'self' 'unsafe-eval' 'unsafe-inline' data:`, // 解决使用外域图片 报错问题
       renderer: {
         config: rendererConfig,
         entryPoints: [
